@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# ArthAI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Intelligent CRM + ERP platform** — a modern marketing site for ArthAI, unifying customer operations, enterprise back-office workflows, and AI agents in one place.
 
-Currently, two official plugins are available:
+Built by **Sunita Kumari** (Founder).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Landing page** with hero, platform highlights, and product showcases
+- **AI Agents** — CRM Intelligence, ERP Operations, Integration Hub
+- **CRM & ERP sections** — interactive UI mockups for sales pipeline, analytics, finance, and procurement
+- **Unified architecture** — CRM–ERP orchestration diagram
+- **Founder section** — leadership note from Sunita Kumari
+- **Responsive design** — mobile-friendly navigation and layouts
+- **Motion** — scroll animations via Framer Motion
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+| Layer | Tools |
+|-------|--------|
+| Framework | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) |
+| Build | [Vite 8](https://vite.dev/) |
+| Styling | [Tailwind CSS 4](https://tailwindcss.com/) |
+| Icons | [Lucide React](https://lucide.dev/) |
+| Animation | [Framer Motion](https://www.framer.com/motion/) |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- [Node.js](https://nodejs.org/) 18+ (20+ recommended)
+- npm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Install
+
+```bash
+git clone https://github.com/nandani013/ArthAI.git
+cd ArthAI
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Production build
+
+```bash
+npm run build
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Project structure
+
+```
+src/
+├── App.tsx              # Page layout and section order
+├── index.css            # Design tokens, utilities, theme
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── FeatureStrip.tsx
+│   ├── AgentShowcase.tsx
+│   ├── HowItWorks.tsx
+│   ├── CrmShowcase.tsx
+│   ├── ErpShowcase.tsx
+│   ├── IntegrationShowcase.tsx
+│   ├── Features.tsx
+│   ├── Testimonials.tsx
+│   ├── Stats.tsx
+│   └── Footer.tsx
+└── main.tsx
+```
+
+## Design
+
+ArthAI uses a custom **ink + teal + coral** palette (not a generic purple SaaS template):
+
+- **Ink** — deep backgrounds for hero, process, and founder sections
+- **Teal** — primary brand and CTAs
+- **Coral** — accent highlights
+- **Plus Jakarta Sans** — UI typography
+
+## Repository
+
+[https://github.com/nandani013/ArthAI](https://github.com/nandani013/ArthAI)
+
+## License
+
+Private project. All rights reserved.
