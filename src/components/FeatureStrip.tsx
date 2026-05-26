@@ -1,66 +1,73 @@
 import { motion } from 'framer-motion';
-import { Code2, MessageSquare, CheckCircle } from 'lucide-react';
+import { Code2, MessageSquare, CheckCircle, ArrowUpRight } from 'lucide-react';
 
 const cards = [
   {
     icon: Code2,
     title: 'Smart Workflow Automation',
-    description: 'ArthAI orchestrates efficient workflows across CRM and ERP based on your business rules.',
-    iconColor: 'text-brand-purple',
-    iconBg: 'bg-brand-purple/10',
+    description:
+      'Orchestrate CRM and ERP workflows from a single rules engine—no brittle point-to-point scripts.',
+    span: 'md:col-span-2',
+    accent: 'border-l-brand',
   },
   {
     icon: MessageSquare,
     title: 'Contextual Guidance',
-    description: 'Expert advice on architecture, tech stack, and scaling strategies for your enterprise.',
-    iconColor: 'text-brand-blue',
-    iconBg: 'bg-brand-blue/10',
+    description: 'Architecture and scaling advice tailored to your stack and team maturity.',
+    span: '',
+    accent: 'border-l-accent',
   },
   {
     icon: CheckCircle,
     title: 'Quality Assurance',
-    description: 'Automated validation ensures your operations stay reliable and performant.',
-    iconColor: 'text-brand-purple-light',
-    iconBg: 'bg-brand-purple/10',
+    description: 'Automated validation keeps operations reliable as you grow.',
+    span: '',
+    accent: 'border-l-brand-light',
   },
 ];
 
 export function FeatureStrip() {
   return (
-    <section className="py-20 bg-gradient-section border-y border-border/60">
+    <section className="py-20 md:py-28 bg-surface-warm bg-mesh">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-14 max-w-2xl"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            Everything You Need to Run Your{' '}
-            <span className="text-gradient-purple">Enterprise</span>
+          <span className="section-label bg-brand/10 text-brand border border-brand/20 mb-4">
+            Platform
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-ink">
+            Built for teams who need{' '}
+            <span className="text-gradient">speed and control</span>
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            ArthAI combines cutting-edge artificial intelligence with proven business
-            frameworks to help you build successful operations faster.
+          <p className="text-text-secondary text-lg leading-relaxed">
+            ArthAI pairs proven enterprise patterns with AI-native tooling—so you ship
+            operations faster without sacrificing governance.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {cards.map((card, idx) => (
-            <motion.div
+            <motion.article
               key={card.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-2xl p-8 border border-border card-shadow hover:card-shadow-lg transition-shadow"
+              transition={{ delay: idx * 0.08 }}
+              className={`group ${card.span} bg-white rounded-2xl p-8 border border-border card-shadow hover:card-shadow-lg transition-all border-l-4 ${card.accent}`}
             >
-              <div className={`inline-flex p-3 rounded-xl ${card.iconBg} mb-5`}>
-                <card.icon className={`w-6 h-6 ${card.iconColor}`} />
+              <div className="flex justify-between items-start mb-6">
+                <div className="p-3 rounded-xl bg-brand/10">
+                  <card.icon className="w-6 h-6 text-brand" />
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-border-strong group-hover:text-brand transition-colors" />
               </div>
-              <h3 className="text-lg font-bold mb-3">{card.title}</h3>
+              <h3 className="text-lg font-bold text-ink mb-2">{card.title}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">{card.description}</p>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

@@ -3,86 +3,80 @@ import { Brain, Code2, Rocket, CheckCircle } from 'lucide-react';
 
 const steps = [
   {
-    step: 'Step 1',
+    step: '01',
     icon: Brain,
     title: 'Define Your Vision',
     description:
-      'Tell ArthAI about your business goals, teams, and core workflows. Our AI helps refine and prioritize requirements.',
-    color: 'bg-brand-purple',
+      'Share goals, teams, and workflows. ArthAI helps refine requirements into a clear implementation plan.',
   },
   {
-    step: 'Step 2',
+    step: '02',
     icon: Code2,
     title: 'AI-Powered Setup',
     description:
-      'ArthAI configures CRM pipelines, ERP modules, and integrations — building a functional platform based on your needs.',
-    color: 'bg-brand-blue',
+      'CRM pipelines, ERP modules, and integrations configured from your inputs—not months of manual setup.',
   },
   {
-    step: 'Step 3',
+    step: '03',
     icon: Rocket,
     title: 'Iterate & Improve',
     description:
-      'Test workflows, collect feedback, and refine operations with AI-assisted improvements and optimizations.',
-    color: 'bg-brand-purple-light',
+      'Test workflows, gather feedback, and refine with AI-assisted suggestions as your operations evolve.',
   },
   {
-    step: 'Step 4',
+    step: '04',
     icon: CheckCircle,
     title: 'Launch at Scale',
     description:
-      'Deploy your unified platform with confidence, ready to attract users, investors, and stakeholders.',
-    color: 'bg-brand-purple',
+      'Deploy a unified platform ready for stakeholders, auditors, and the growth ahead.',
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section className="py-24 bg-surface-muted">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-24 md:py-28 bg-ink text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-mesh opacity-20 pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-2xl mx-auto"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            How ArthAI Works
+          <span className="section-label bg-brand/20 text-brand-light border border-brand/30 mb-4">
+            Process
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+            How ArthAI works
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            Our streamlined process helps you go from idea to implementation with
-            unprecedented speed and efficiency.
+          <p className="text-white/55 text-lg">
+            From first conversation to live operations—a streamlined path built for speed.
           </p>
         </motion.div>
 
-        <div className="relative">
-          <div className="hidden lg:block absolute top-[72px] left-[12%] right-[12%] h-0.5 bg-border" />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="flex flex-col items-center text-center"
-              >
-                <span className="text-xs font-semibold text-brand-purple uppercase tracking-wider mb-4">
-                  {item.step}
-                </span>
-                <div
-                  className={`w-14 h-14 rounded-full ${item.color} flex items-center justify-center mb-6 shadow-md relative z-10`}
-                >
-                  <item.icon className="w-6 h-6 text-white" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {steps.map((item, idx) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.08 }}
+              className="relative"
+            >
+              <span className="text-5xl font-extrabold text-white/5 absolute -top-2 right-4 select-none">
+                {item.step}
+              </span>
+              <div className="rounded-2xl border border-white/10 bg-ink-soft/80 p-6 h-full hover:border-brand/40 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-brand/20 flex items-center justify-center mb-5">
+                  <item.icon className="w-6 h-6 text-brand-light" />
                 </div>
-                <div className="bg-white rounded-2xl p-6 border border-border card-shadow w-full">
-                  <h3 className="text-lg font-bold text-text-primary mb-3">{item.title}</h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                <h3 className="text-lg font-bold mb-3">{item.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

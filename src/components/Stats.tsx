@@ -43,26 +43,26 @@ function Counter({
 
 export function Stats() {
   const stats = [
-    { value: 99.9, suffix: '%', label: 'Guaranteed Uptime', decimal: true },
-    { value: 10, suffix: 'x', label: 'Faster Workflows', decimal: false },
-    { value: 85, suffix: '%', label: 'Automation Efficiency', decimal: false },
-    { text: 'Enterprise', suffix: '', label: 'Grade Scalability' },
+    { value: 99.9, suffix: '%', label: 'Uptime SLA', decimal: true },
+    { value: 10, suffix: 'x', label: 'Faster workflows', decimal: false },
+    { value: 85, suffix: '%', label: 'Automation rate', decimal: false },
+    { text: 'Enterprise', suffix: '', label: 'Grade scale' },
   ];
 
   return (
-    <section className="py-16 border-y border-border bg-white">
+    <section className="py-16 md:py-20 bg-surface-warm border-t border-border">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 rounded-2xl border border-border bg-white p-8 md:p-10 card-shadow">
           {stats.map((stat, idx) => (
             <motion.div
-              key={idx}
+              key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="flex flex-col items-center text-center"
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              className="flex flex-col items-center text-center md:border-r md:last:border-r-0 border-border md:px-4"
             >
-              <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-2">
+              <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight text-ink mb-2">
                 {stat.text ? (
                   <span>{stat.text}</span>
                 ) : (
@@ -74,7 +74,7 @@ export function Stats() {
                   />
                 )}
               </h3>
-              <p className="text-brand-purple font-medium text-xs tracking-wide uppercase">
+              <p className="text-brand font-semibold text-xs tracking-wide uppercase">
                 {stat.label}
               </p>
             </motion.div>

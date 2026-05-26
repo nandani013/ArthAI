@@ -7,25 +7,28 @@ const founder = {
   author: 'Sunita Kumari',
   role: 'Founder',
   initials: 'SK',
-  color: 'bg-brand-purple',
 };
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 bg-surface-muted">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="testimonials" className="py-24 md:py-28 bg-ink relative overflow-hidden">
+      <div className="absolute inset-0 bg-mesh opacity-15 pointer-events-none" />
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 max-w-xl mx-auto"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+          <span className="section-label bg-brand/20 text-brand-light border border-brand/30 mb-4">
+            Leadership
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
             Meet our founder
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            Sunita Kumari leads ArthAI with a focus on intelligent operations and
-            practical automation for growing teams.
+          <p className="text-white/55 text-lg">
+            Sunita Kumari leads ArthAI with a focus on intelligent operations and practical
+            automation for growing teams.
           </p>
         </motion.div>
 
@@ -33,21 +36,20 @@ export function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-xl mx-auto bg-white rounded-2xl p-8 border border-border card-shadow relative"
+          className="max-w-2xl mx-auto rounded-2xl border border-white/10 bg-ink-soft/90 p-8 md:p-10 relative"
         >
-          <Quote className="w-10 h-10 text-brand-purple-light/60 mb-4" />
-          <p className="text-text-secondary text-sm leading-relaxed mb-8">
+          <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-brand/40 via-transparent to-accent/20 -z-10 opacity-60" />
+          <Quote className="w-9 h-9 text-brand-light/50 mb-5" />
+          <p className="text-white/75 text-base leading-relaxed mb-8">
             &ldquo;{founder.quote}&rdquo;
           </p>
-          <div className="flex items-center gap-3">
-            <div
-              className={`w-11 h-11 rounded-full ${founder.color} flex items-center justify-center text-white text-sm font-bold`}
-            >
+          <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+            <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center text-white text-sm font-bold">
               {founder.initials}
             </div>
             <div>
-              <p className="font-semibold text-text-primary text-sm">{founder.author}</p>
-              <p className="text-text-muted text-xs">{founder.role}</p>
+              <p className="font-bold text-white">{founder.author}</p>
+              <p className="text-brand-light text-sm font-medium">{founder.role}</p>
             </div>
           </div>
         </motion.div>

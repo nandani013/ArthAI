@@ -13,7 +13,7 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-text-primary selection:bg-brand-purple/20 overflow-x-hidden">
+    <div className="min-h-screen bg-surface-warm text-text-primary selection:bg-brand/20 overflow-x-hidden">
       <Navbar />
 
       <main>

@@ -10,7 +10,7 @@ const features = [
   {
     title: 'ERP Workflow Engine',
     icon: Settings2,
-    bullets: ['Finance', 'Operations', 'HR management', 'Inventory systems'],
+    bullets: ['Finance & operations', 'HR management', 'Inventory systems'],
   },
   {
     title: 'Unified Business Intelligence',
@@ -25,53 +25,54 @@ const features = [
   {
     title: 'AI Business Agents',
     icon: Sparkles,
-    bullets: ['Autonomous workflows', 'AI task orchestration', 'Intelligent operations'],
+    bullets: ['Autonomous workflows', 'Task orchestration', 'Intelligent ops'],
   },
   {
     title: 'Integration Ecosystem',
     icon: Network,
-    bullets: ['CRM ↔ ERP synchronization', 'APIs', 'Cloud integrations'],
+    bullets: ['CRM ↔ ERP sync', 'APIs', 'Cloud connectors'],
   },
 ];
 
 export function Features() {
   return (
-    <section id="features" className="py-24 bg-white">
+    <section id="features" className="py-24 md:py-28 bg-surface-warm bg-mesh">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16 max-w-2xl"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            Everything Your <span className="text-gradient-purple">Business Needs</span>
+          <span className="section-label bg-accent/10 text-accent border border-accent/25 mb-4">
+            Capabilities
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-ink">
+            Everything your <span className="text-gradient">business needs</span>
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            A powerful suite of AI-native tools designed to replace legacy systems and unify
-            your entire enterprise stack.
+          <p className="text-text-secondary text-lg leading-relaxed">
+            AI-native tools to replace fragmented legacy systems and unify your enterprise stack.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature, index) => (
             <motion.div
-              key={index}
+              key={feature.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              whileHover={{ y: -4 }}
-              className="bg-white rounded-2xl p-8 border border-border card-shadow hover:card-shadow-lg transition-all duration-300"
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              className="bg-white rounded-2xl p-8 border border-border card-shadow hover:border-brand/25 transition-all"
             >
-              <div className="w-12 h-12 rounded-xl bg-brand-purple/10 flex items-center justify-center mb-6">
-                <feature.icon className="w-6 h-6 text-brand-purple" />
+              <div className="w-11 h-11 rounded-lg bg-brand/10 flex items-center justify-center mb-5">
+                <feature.icon className="w-5 h-5 text-brand" />
               </div>
-              <h3 className="text-xl font-semibold text-text-primary mb-5">{feature.title}</h3>
-              <ul className="space-y-3">
-                {feature.bullets.map((bullet, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-text-secondary">
-                    <CheckCircle2 className="w-4 h-4 mt-0.5 text-brand-purple shrink-0" />
+              <h3 className="text-lg font-bold text-ink mb-4">{feature.title}</h3>
+              <ul className="space-y-2.5">
+                {feature.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-start gap-2.5 text-sm text-text-secondary">
+                    <CheckCircle2 className="w-4 h-4 mt-0.5 text-brand shrink-0" />
                     <span>{bullet}</span>
                   </li>
                 ))}
