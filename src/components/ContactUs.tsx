@@ -3,6 +3,25 @@ import { Phone, Mail, MapPin, X, ArrowUpRight } from 'lucide-react';
 
 export function ContactUs() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      (e.target as HTMLFormElement).reset();
+      
+      // Reset success message after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000);
+    }, 1000);
+  };
 
   useEffect(() => {
     const handleOpenModal = () => setIsOpen(true);
@@ -103,7 +122,7 @@ export function ContactUs() {
                     <span className="text-brand">Let's Talk!</span>
                   </h2>
                   
-                  <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                  <form className="space-y-4" onSubmit={handleSubmit}>
                     <div>
                       <label className="block text-sm font-semibold text-ink/80 mb-1.5">
                         Name <span className="text-red-500">*</span>
@@ -112,6 +131,7 @@ export function ContactUs() {
                         type="text" 
                         className="w-full px-4 py-3 rounded-xl border-none bg-white focus:outline-none focus:ring-2 focus:ring-brand shadow-sm transition-shadow" 
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
                     <div>
@@ -122,6 +142,7 @@ export function ContactUs() {
                         type="tel" 
                         className="w-full px-4 py-3 rounded-xl border-none bg-white focus:outline-none focus:ring-2 focus:ring-brand shadow-sm transition-shadow" 
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
                     <div>
@@ -132,6 +153,7 @@ export function ContactUs() {
                         type="email" 
                         className="w-full px-4 py-3 rounded-xl border-none bg-white focus:outline-none focus:ring-2 focus:ring-brand shadow-sm transition-shadow" 
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
                     <div>
@@ -141,11 +163,20 @@ export function ContactUs() {
                       <textarea 
                         rows={3} 
                         className="w-full px-4 py-3 rounded-xl border-none bg-white focus:outline-none focus:ring-2 focus:ring-brand shadow-sm transition-shadow resize-none"
+                        disabled={isSubmitting}
                       ></textarea>
                     </div>
                     <div className="pt-2">
-                      <button type="submit" className="btn-primary w-full md:w-auto px-8 py-3.5 text-base">
-                        Submit
+                      <button 
+                        type="submit" 
+                        disabled={isSubmitting || isSubmitted}
+                        className={`w-full md:w-auto px-8 py-3.5 text-base transition-all duration-300 ${
+                          isSubmitted 
+                            ? 'bg-green-500 text-white font-semibold rounded-lg shadow-md' 
+                            : 'btn-primary'
+                        } ${isSubmitting ? 'opacity-70 cursor-wait' : ''}`}
+                      >
+                        {isSubmitting ? 'Submitting...' : isSubmitted ? 'Message Sent! ✓' : 'Submit'}
                       </button>
                     </div>
                   </form>
