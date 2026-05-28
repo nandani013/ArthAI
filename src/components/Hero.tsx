@@ -64,13 +64,9 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button type="button" className="btn-primary px-8 py-4">
-                Start free trial
+              <button type="button" className="btn-primary px-8 py-4" onClick={() => window.dispatchEvent(new Event('open-contact-modal'))}>
+                Get in touch
                 <ArrowRight className="w-4 h-4" />
-              </button>
-              <button type="button" className="btn-outline-light px-8 py-4">
-                <Calendar className="w-4 h-4" />
-                Book a demo
               </button>
             </motion.div>
           </div>
