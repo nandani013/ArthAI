@@ -86,7 +86,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-4 group cursor-pointer hover:text-brand-light transition-colors">
                 <Phone className="w-5 h-5 text-white group-hover:text-brand-light transition-colors shrink-0 opacity-80" />
-                <p>+91 9051831818</p>
+                <p>+1 (555) 123-4567</p>
               </div>
               <div className="flex items-center gap-4 group cursor-pointer hover:text-brand-light transition-colors">
                 <Send className="w-5 h-5 text-white group-hover:text-brand-light transition-colors shrink-0 opacity-80" />

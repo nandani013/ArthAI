@@ -4,9 +4,9 @@ import { Quote } from 'lucide-react';
 const founder = {
   quote:
     'ArthAI was built to help teams run smarter operations—unifying CRM and ERP workflows with AI that learns how your business works. Our mission is to make enterprise automation accessible, reliable, and fast to deploy.',
-  author: 'Sunita Kumari',
+  author: 'Jane Doe',
   role: 'Founder',
-  initials: 'SK',
+  initials: 'JD',
 };
 
 export function Testimonials() {
@@ -27,7 +27,7 @@ export function Testimonials() {
             Meet our founder
           </h2>
           <p className="text-white/55 text-lg">
-            Sunita Kumari leads ArthAI with a focus on intelligent operations and practical
+            Jane Doe leads ArthAI with a focus on intelligent operations and practical
             automation for growing teams.
           </p>
         </motion.div>
