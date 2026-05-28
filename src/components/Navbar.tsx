@@ -6,6 +6,7 @@ const links = [
   { href: '#agents', label: 'AI Agents' },
   { href: '#testimonials', label: 'About' },
   { href: '#integrations', label: 'Platform' },
+  { href: '#contact-details', label: 'Contact Us' },
 ];
 
 export function Navbar() {
@@ -50,8 +51,14 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={`transition-colors ${
-                isLight ? 'hover:text-brand' : 'hover:text-white'
+                isLight ? 'hover:text-brand' : 'hover:text-brand-light'
               }`}
+              onClick={(e) => {
+                if (link.label === 'Contact Us') {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-contact-modal'));
+                }
+              }}
             >
               {link.label}
             </a>
@@ -59,8 +66,11 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <a href="#contact" className="btn-primary text-sm py-2.5 px-5">
-            Get Started
+          <a href="#contact-details" className="bg-accent hover:bg-accent-soft text-white px-6 py-2.5 rounded-full font-semibold transition-colors shadow-md text-sm" onClick={(e) => {
+            e.preventDefault();
+            window.dispatchEvent(new Event('open-contact-modal'));
+          }}>
+            Talk To Us
           </a>
         </div>
 
@@ -81,13 +91,23 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className="text-white/80 hover:text-brand-light py-2 text-sm font-medium"
-              onClick={() => setMobileOpen(false)}
+              onClick={(e) => {
+                setMobileOpen(false);
+                if (link.label === 'Contact Us') {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-contact-modal'));
+                }
+              }}
             >
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="btn-primary text-center mt-2" onClick={() => setMobileOpen(false)}>
-            Get Started
+          <a href="#contact-details" className="bg-accent hover:bg-accent-soft text-white text-center mt-2 py-2.5 rounded-full font-semibold" onClick={(e) => {
+            e.preventDefault();
+            setMobileOpen(false);
+            window.dispatchEvent(new Event('open-contact-modal'));
+          }}>
+            Talk To Us
           </a>
         </div>
       )}

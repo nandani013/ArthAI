@@ -10,6 +10,7 @@ import { Features } from './components/Features';
 import { Testimonials } from './components/Testimonials';
 import { Stats } from './components/Stats';
 import { Footer } from './components/Footer';
+import { ContactUs } from './components/ContactUs';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Features />
         <Testimonials />
         <Stats />
+        <ContactUs />
       </main>
 
       <Footer />
