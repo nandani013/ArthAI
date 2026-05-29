@@ -11,6 +11,7 @@ import { Testimonials } from './components/Testimonials';
 import { Stats } from './components/Stats';
 import { Footer } from './components/Footer';
 import { ContactUs } from './components/ContactUs';
+import { Industries } from './components/Industries';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Features />
         <Testimonials />
         <Stats />
+        <Industries />
         <ContactUs />
       </main>
 

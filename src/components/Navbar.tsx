@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Hexagon } from 'lucide-react';
 
 const links = [
-  { href: '#features', label: 'Features' },
-  { href: '#agents', label: 'AI Agents' },
-  { href: '#testimonials', label: 'About' },
   { href: '#integrations', label: 'Platform' },
+  { href: '#features', label: 'Solutions' },
+  { href: '#agents', label: 'AI Agents' },
+  { href: '#industries', label: 'Industries' },
+  { href: '#testimonials', label: 'About' },
   { href: '#contact-details', label: 'Contact Us' },
 ];
 
@@ -23,9 +24,8 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isLight ? 'glass-nav-light' : 'glass-nav'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isLight ? 'glass-nav-light' : 'glass-nav'
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2.5 shrink-0">
@@ -33,26 +33,23 @@ export function Navbar() {
             <Hexagon className="w-5 h-5 text-white" strokeWidth={2} />
           </div>
           <span
-            className={`text-xl font-bold tracking-tight ${
-              isLight ? 'text-text-primary' : 'text-white'
-            }`}
+            className={`text-xl font-bold tracking-tight ${isLight ? 'text-text-primary' : 'text-white'
+              }`}
           >
             Arth<span className="text-gradient">AI</span>
           </span>
         </a>
 
         <div
-          className={`hidden md:flex items-center gap-8 text-sm font-medium ${
-            isLight ? 'text-text-secondary' : 'text-white/70'
-          }`}
+          className={`hidden md:flex items-center gap-8 text-sm font-medium ${isLight ? 'text-text-secondary' : 'text-white/70'
+            }`}
         >
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`transition-colors ${
-                isLight ? 'hover:text-brand' : 'hover:text-brand-light'
-              }`}
+              className={`transition-colors ${isLight ? 'hover:text-brand' : 'hover:text-brand-light'
+                }`}
               onClick={(e) => {
                 if (link.label === 'Contact Us') {
                   e.preventDefault();
