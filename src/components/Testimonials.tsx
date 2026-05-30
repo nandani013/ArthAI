@@ -1,7 +1,4 @@
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
-
-// Founder information removed as per request
 
 export function Testimonials() {
   return (
@@ -14,14 +11,12 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-12 max-w-xl mx-auto"
         >
-          <span className="section-label bg-brand/20 text-brand-light border border-brand/30 mb-4">
-            Leadership
-          </span>
+
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
             About ArthAI
           </h2>
           <p className="text-white/55 text-lg">
-ArthAI delivers AI‑driven transformation for enterprises worldwide.
+            ArthAI delivers AI‑driven transformation for enterprises worldwide.
           </p>
         </motion.div>
 
