@@ -4,10 +4,10 @@ import { Menu, X, Hexagon } from 'lucide-react';
 const links = [
   { href: '/', label: 'Home' },
   { href: '#integrations', label: 'Platform' },
-  { href: '#features', label: 'Products' },
-  { href: '#agents', label: 'AI Agents' },
+  { href: '#features', label: 'Product Offering' },
+  { href: '#agents', label: 'Insights & Research' },
   { href: '#industries', label: 'Who We Serve' },
-  { href: '#testimonials', label: 'About' },
+  { href: '#testimonials', label: 'About Us' },
   { href: '#contact-details', label: 'Contact Us' },
 ];
 
@@ -42,7 +42,7 @@ export function Navbar() {
         </a>
 
         {/* Centered navigation links */}
-        <div className={`hidden md:flex flex-nowrap whitespace-nowrap md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-4 md:gap-8 ml-8 text-sm font-medium ${isLight ? 'text-text-secondary' : 'text-white/70'}`}>
+        <div className={`hidden lg:flex flex-1 justify-center items-center gap-5 lg:gap-8 ml-8 lg:ml-12 text-sm font-medium ${isLight ? 'text-text-secondary' : 'text-white/70'}`}>
           {links.map((link) => (
             <a
               key={link.href}
