@@ -17,12 +17,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-16 text-sm">
           {/* Brand Info */}
           <div className="md:col-span-12 lg:col-span-4">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <Hexagon className="w-6 h-6 text-white" strokeWidth={2} />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl overflow-hidden border border-white/10 shadow-lg bg-[#051024]">
+                <img src="/logo.png" alt="ArthAI Studio Logo" className="w-full h-full object-cover scale-105" />
               </div>
               <span className="text-3xl font-bold tracking-tight">
-                Arth<span className="text-gradient">AI</span>
+                ArthAI <span className="text-gradient">Studio</span>
               </span>
             </div>
             <p className="text-white/60 leading-relaxed mb-8 max-w-sm text-base">

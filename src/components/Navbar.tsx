@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Hexagon } from 'lucide-react';
 
 const links = [
+  { href: '/', label: 'Home' },
   { href: '#integrations', label: 'Platform' },
   { href: '#features', label: 'Solutions' },
   { href: '#agents', label: 'AI Agents' },
@@ -27,29 +28,26 @@ export function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isLight ? 'glass-nav-light' : 'glass-nav'
         }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5 shrink-0">
-          <div className="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center">
-            <Hexagon className="w-5 h-5 text-white" strokeWidth={2} />
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between relative">
+        <a href="#" className="flex items-center gap-3 shrink-0">
+          <div className="w-11 h-11 flex items-center justify-center rounded-xl overflow-hidden border border-white/10 shadow-lg bg-[#051024]">
+            <img src="/logo.png" alt="ArthAI Studio Logo" className="w-full h-full object-cover scale-105" />
           </div>
           <span
             className={`text-xl font-bold tracking-tight ${isLight ? 'text-text-primary' : 'text-white'
               }`}
           >
-            Arth<span className="text-gradient">AI</span>
+            ArthAI <span className="text-gradient">Studio</span>
           </span>
-        </a>
+</a>
 
-        <div
-          className={`hidden md:flex items-center gap-8 text-sm font-medium ${isLight ? 'text-text-secondary' : 'text-white/70'
-            }`}
-        >
+        {/* Centered navigation links */}
+        <div className={`hidden md:flex flex-nowrap whitespace-nowrap md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-4 md:gap-8 ml-8 text-sm font-medium ${isLight ? 'text-text-secondary' : 'text-white/70'}`}>
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`transition-colors ${isLight ? 'hover:text-brand' : 'hover:text-brand-light'
-                }`}
+              className={`flex-shrink-0 transition-colors ${isLight ? 'hover:text-brand' : 'hover:text-brand-light'}`}
               onClick={(e) => {
                 if (link.label === 'Contact Us') {
                   e.preventDefault();
@@ -62,14 +60,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <a href="#contact-details" className="bg-accent hover:bg-accent-soft text-white px-6 py-2.5 rounded-full font-semibold transition-colors shadow-md text-sm" onClick={(e) => {
-            e.preventDefault();
-            window.dispatchEvent(new Event('open-contact-modal'));
-          }}>
-            Talk To Us
-          </a>
-        </div>
+
 
         <button
           type="button"
@@ -99,13 +90,7 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href="#contact-details" className="bg-accent hover:bg-accent-soft text-white text-center mt-2 py-2.5 rounded-full font-semibold" onClick={(e) => {
-            e.preventDefault();
-            setMobileOpen(false);
-            window.dispatchEvent(new Event('open-contact-modal'));
-          }}>
-            Talk To Us
-          </a>
+
         </div>
       )}
     </nav>
