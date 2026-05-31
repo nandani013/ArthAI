@@ -11,7 +11,7 @@ export function Industries() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">
-            Industries
+            Who We Serve
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
             ArthAIStudio powers AI‑driven transformation across multiple verticals, from finance and healthcare to retail and manufacturing. Our platform adapts to industry‑specific workflows, delivering actionable insights and automating complex processes.
