@@ -86,7 +86,7 @@ export function Hero() {
           >
             {/* Subtitle */}
             <p className="text-white font-semibold text-sm md:text-base mb-4 text-center tracking-wide">
-              The Enterprise Engine:{' '}
+              The ArthAIStudio Engine:{' '}
               <span className="text-brand-light">Autonomous AI Orchestration</span>
             </p>
 
