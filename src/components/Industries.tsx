@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export function Industries() {
   return (
     <section id="industries" className="py-24 md:py-28 bg-ink-soft text-white relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[85rem] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,7 @@ export function Industries() {
             ArthAIStudio powers AI‑driven transformation across multiple verticals, from finance and healthcare to retail and manufacturing. Our platform adapts to industry‑specific workflows, delivering actionable insights and automating complex processes.
           </p>
         </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             <div className="p-6 bg-white/5 rounded-xl border border-white/10">
               <h3 className="text-xl font-bold text-white mb-2">Finance</h3>
               <p className="text-white/70">AI‑driven financial analytics and automation.</p>
@@ -33,6 +33,10 @@ export function Industries() {
             <div className="p-6 bg-white/5 rounded-xl border border-white/10">
               <h3 className="text-xl font-bold text-white mb-2">Manufacturing</h3>
               <p className="text-white/70">Predictive maintenance and production optimization.</p>
+            </div>
+            <div className="p-6 bg-white/5 rounded-xl border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-2">EdTech</h3>
+              <p className="text-white/70">AI-powered learning platforms, personalized education experiences, and intelligent student engagement.</p>
             </div>
           </div>
       </div>
