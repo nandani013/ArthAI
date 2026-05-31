@@ -82,7 +82,7 @@ export function ContactUs() {
                     <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-1 text-ink">+1 (555) 123-4567</h3>
+                    <h3 className="text-lg font-bold mb-1 text-ink">+91 98765 43210</h3>
                     <p className="text-text-muted text-sm font-medium">Phone</p>
                   </div>
                 </div>
