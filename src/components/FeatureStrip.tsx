@@ -44,7 +44,7 @@ export function FeatureStrip() {
             <span className="text-gradient">speed and control</span>
           </h2>
           <p className="text-text-secondary text-lg leading-relaxed">
-            ArthAI pairs proven enterprise patterns with AI-native tooling—so you ship
+            ArthAIStudio pairs proven enterprise patterns with AI-native tooling—so you ship
             operations faster without sacrificing governance.
           </p>
         </motion.div>

@@ -19,14 +19,14 @@ export function Footer() {
           <div className="md:col-span-12 lg:col-span-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 flex items-center justify-center rounded-xl overflow-hidden border border-white/10 shadow-lg bg-[#051024]">
-                <img src="/logo.png" alt="ArthAI Studio Logo" className="w-full h-full object-cover scale-105" />
+                <img src="/logo.png" alt="ArthAIStudio Logo" className="w-full h-full object-cover scale-105" />
               </div>
-              <span className="text-3xl font-bold tracking-tight">
-                ArthAI <span className="text-gradient">Studio</span>
+              <span className="text-xl font-bold tracking-tight text-white">
+                ArthAI<span className="text-gradient">Studio</span>
               </span>
             </div>
             <p className="text-white/60 leading-relaxed mb-8 max-w-sm text-base">
-              ArthAI delivers innovative AI‑driven solutions that empower businesses worldwide.
+              ArthAIStudio delivers innovative AI‑driven solutions that empower businesses worldwide.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a href="https://www.facebook.com/login" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#3b5998] flex items-center justify-center hover:opacity-80 transition-opacity">
@@ -102,7 +102,7 @@ export function Footer() {
 
         {/* Footer Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 text-sm text-white/60">
-          <p>© {new Date().getFullYear()} ArthAI, All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} ArthAIStudio, All Rights Reserved.</p>
           <div className="flex items-center gap-6 mt-6 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
             <button

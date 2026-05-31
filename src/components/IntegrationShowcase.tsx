@@ -75,8 +75,13 @@ export function IntegrationShowcase() {
                     <stop offset="100%" stopColor="#0d9488" stopOpacity="0.4" />
                   </linearGradient>
 
+                  <linearGradient id="lg-teal-api" x1="200" y1="200" x2="200" y2="55" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#2dd4bf" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#0d9488" stopOpacity="0.4" />
+                  </linearGradient>
+
                   {/* Glow filter */}
-                  <filter id="line-glow">
+                  <filter id="line-glow" filterUnits="userSpaceOnUse" x="-50" y="-50" width="500" height="500">
                     <feGaussianBlur stdDeviation="2.5" result="blur" />
                     <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                   </filter>
@@ -93,8 +98,8 @@ export function IntegrationShowcase() {
                   strokeDasharray="6 6" className="animate-[dash_2.5s_linear_infinite]" />
 
                 {/* APIs line (teal) */}
-                <line x1="200" y1="200" x2="200" y2="55"
-                  stroke="url(#lg-teal)" strokeWidth="2.5" filter="url(#line-glow)"
+                <line x1="200" y1="200" x2="199.9" y2="55"
+                  stroke="url(#lg-teal-api)" strokeWidth="2.5" filter="url(#line-glow)"
                   strokeDasharray="6 6" className="animate-[dash_4s_linear_infinite]" />
 
                 {/* Workflows line (teal) */}

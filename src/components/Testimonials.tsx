@@ -13,10 +13,10 @@ export function Testimonials() {
         >
 
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
-            About ArthAI
+            About ArthAIStudio
           </h2>
           <p className="text-white/55 text-lg">
-            ArthAI delivers AI‑driven transformation for enterprises worldwide.
+            ArthAIStudio delivers AI‑driven transformation for enterprises worldwide.
           </p>
         </motion.div>
 

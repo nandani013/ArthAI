@@ -14,7 +14,7 @@ export function Industries() {
             Industries
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            ArthAI powers AI‑driven transformation across multiple verticals, from finance and healthcare to retail and manufacturing. Our platform adapts to industry‑specific workflows, delivering actionable insights and automating complex processes.
+            ArthAIStudio powers AI‑driven transformation across multiple verticals, from finance and healthcare to retail and manufacturing. Our platform adapts to industry‑specific workflows, delivering actionable insights and automating complex processes.
           </p>
         </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

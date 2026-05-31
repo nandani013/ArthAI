@@ -20,7 +20,7 @@ export function PlatformPreview() {
               A single platform for your <span className="text-gradient">entire business</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Stop switching between dozens of tabs. ArthAI brings your customer relationships, financial operations, and project management into one beautiful, lightning-fast interface powered by next-gen AI.
+              Stop switching between dozens of tabs. ArthAIStudio brings your customer relationships, financial operations, and project management into one beautiful, lightning-fast interface powered by next-gen AI.
             </p>
             
             <ul className="space-y-4 mb-8">

@@ -81,7 +81,7 @@ export function Roadmap() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
           >
-            ArthAI <span className="text-gradient">Product Roadmap</span>
+            ArthAIStudio <span className="text-gradient">Product Roadmap</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

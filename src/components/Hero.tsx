@@ -56,7 +56,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-white/60 max-w-lg mb-10 leading-relaxed"
             >
-              ArthAI unifies CRM, ERP, and autonomous AI agents into one platform—so your
+              ArthAIStudio unifies CRM, ERP, and autonomous AI agents into one platform—so your
               teams move faster with clarity, not complexity.
             </motion.p>
 

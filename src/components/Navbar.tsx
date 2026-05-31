@@ -31,13 +31,13 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between relative">
         <a href="#" className="flex items-center gap-3 shrink-0">
           <div className="w-11 h-11 flex items-center justify-center rounded-xl overflow-hidden border border-white/10 shadow-lg bg-[#051024]">
-            <img src="/logo.png" alt="ArthAI Studio Logo" className="w-full h-full object-cover scale-105" />
+            <img src="/logo.png" alt="ArthAIStudio Logo" className="w-full h-full object-cover scale-105" />
           </div>
           <span
             className={`text-xl font-bold tracking-tight ${isLight ? 'text-text-primary' : 'text-white'
               }`}
           >
-            ArthAI <span className="text-gradient">Studio</span>
+            ArthAI<span className="text-gradient">Studio</span>
           </span>
         </a>
 

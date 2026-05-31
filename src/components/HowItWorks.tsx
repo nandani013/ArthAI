@@ -7,7 +7,7 @@ const steps = [
     icon: Brain,
     title: 'Define Your Vision',
     description:
-      'Share goals, teams, and workflows. ArthAI helps refine requirements into a clear implementation plan.',
+      'Share goals, teams, and workflows. ArthAIStudio helps refine requirements into a clear implementation plan.',
   },
   {
     step: '02',
@@ -48,7 +48,7 @@ export function HowItWorks() {
             Process
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-            How ArthAI works
+            How ArthAIStudio works
           </h2>
           <p className="text-white/55 text-lg">
             From first conversation to live operations—a streamlined path built for speed.
